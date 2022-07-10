@@ -28,16 +28,7 @@ $cur_user = $_SESSION["username"];
         .wrapper{ width: 350px; padding: 20px;}
     </style>
 
-<script type="text/javascript">
-    function EnableDisableTextBox(sire) {
-        var selectedValue = ddlModels.options[ddlModels.selectedIndex].value;
-        var txtOther = document.getElementById("txtOther");
-        txtOther.disabled = selectedValue == 5 ? false : true;
-        if (!txtOther.disabled) {
-            txtOther.focus();
-        }
-    }
-</script>
+
 
 </head>
 <body>
@@ -159,6 +150,18 @@ $cur_user = $_SESSION["username"];
 
             
             <div class="form-group">
+
+            <script type="text/javascript">
+    function EnableDisableTextBox(sire) {
+        var selectedValue = ddlModels.options[ddlModels.selectedIndex].value;
+        var txtOther = document.getElementById("txtOther");
+        txtOther.disabled = selectedValue == 5 ? false : true;
+        if (!txtOther.disabled) {
+            txtOther.focus();
+        }
+    }
+</script>
+
             <label>Sire</label>
             <select id="sire" name="sire" class="form-control">
             <?php 
