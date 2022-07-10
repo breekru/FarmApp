@@ -125,6 +125,27 @@ $cur_user = $_SESSION["username"];
                 <label>Parents</label>
                 <input type="text" name="parents" class="form-control">
             </div>
+
+            <div class="form-group">
+            <select id="weekpicker" name="weekpicker">
+            <?php 
+            //$sql = "SELECT `day_of_week` FROM `stats` WHERE `timeframe` = \"week\"";
+            $sql = "SELECT `name` FROM `animals` WHERE `gender` = \"Male\" && `user_id`='$cur_user'";
+            $result = mysqli_query($con,$sql);
+            $count=1;
+            while($row = mysqli_fetch_assoc($result)):;
+            ?>
+                <option value="<?php echo $row["name"]; ?>"><?php echo $row["name"]; ?></option>
+
+                <?php
+                endwhile;
+                ?>
+</select>
+
+                <label>Dam</label>
+                <input type="text" name="parents" class="form-control">
+            </div>
+
             <div class="form-group">
                 <label for="status">Status</label>
                 <select id="status" name="status" class="form-control">
