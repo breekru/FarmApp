@@ -152,7 +152,7 @@ $cur_user = $_SESSION["username"];
             //$sql = "SELECT `day_of_week` FROM `stats` WHERE `timeframe` = \"week\"";
             $sql_sire = "SELECT `name` FROM `animals` WHERE `gender` = \"Male\" && `user_id`='$cur_user'";
             $result_sire = mysqli_query($con,$sql_sire);
-            $count=1;
+            $count_sire=1;
             while($row_dam = mysqli_fetch_assoc($result_sire)):;
             ?>
                 <option value="<?php echo $row_sire["name"]; ?>"><?php echo $row_sire["name"]; ?></option>
