@@ -127,7 +127,8 @@ $cur_user = $_SESSION["username"];
             </div>
 
             <div class="form-group">
-            <select id="weekpicker" name="weekpicker">
+            <label>Dam</label>
+            <select id="Dam" name="Dam">
             <?php 
             //$sql = "SELECT `day_of_week` FROM `stats` WHERE `timeframe` = \"week\"";
             $sql = "SELECT `name` FROM `animals` WHERE `gender` = \"Male\" && `user_id`='$cur_user'";
@@ -141,9 +142,6 @@ $cur_user = $_SESSION["username"];
                 endwhile;
                 ?>
 </select>
-
-                <label>Dam</label>
-                <input type="text" name="parents" class="form-control">
             </div>
 
             <div class="form-group">
