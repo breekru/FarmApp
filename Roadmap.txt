@@ -1,0 +1,52 @@
+**********************IN PROGRESS***********************************
+
+pictures in SQL--->can upload and view need to make it changeable 
+
+flatten the design across all pages
+
+fix css on updates page
+
+On View page move `Return to List` and `Back to Choose Animal` to top of page
+
+Adjust offspring to be long text
+
+Status (Alive/Dead/Sold/ForSale/Butchered) (Add/Edit complete waiting on View) $status
+
+DOB Add $dob
+
+DOD Add $dod
+
+Cost to Purchase $purch_cost  $purch_info
+
+Sold Cost and Purchaser info $sell_price  $sell_info
+
+Color Description $color
+
+Registered Number / Name  $reg_num   $reg_name
+
+***********************BACKLOG*************************************
+Make offspring linkable to parents and parents linkable to kids.
+Permanent Identifier
+
+pictures side by side for age identifying
+Calendar with notifications
+
+
+
+
+***********************COMPLETED***********************************
+*Add Navigation---->Basic Nav inserted.  will need to be updated at somepoint not on roadmap at this time
+*Add "Are you sure?" popup when deleting -->> Complete
+*Add Pictures
+*Make list page basic info and make full info pages after clicking. -->complete
+*Take ID off of the View Record page <--complete
+*Make records only open up for logged in user(thought this was corrected need to look into it) --->corrected
+*Add Edit button to View Pages
+*Make the site HTTPS to secure the info better
+*Make notes section and medication section in Add/Edit
+*Correct type headers
+*Fix Logo
+
+**************************URL's************************************
+Good PHP guide for creating editable sql entries
+https://www.allphptricks.com/insert-view-edit-and-delete-record-from-database-using-php-and-mysqli/
