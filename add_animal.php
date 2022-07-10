@@ -128,7 +128,7 @@ $cur_user = $_SESSION["username"];
 
             <div class="form-group">
             <label>Dam</label>
-            <select id="Dam" name="Dam">
+            <select id="Dam" name="Dam" class="form-control">
             <?php 
             //$sql = "SELECT `day_of_week` FROM `stats` WHERE `timeframe` = \"week\"";
             $sql = "SELECT `name` FROM `animals` WHERE `gender` = \"Male\" && `user_id`='$cur_user'";
