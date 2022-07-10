@@ -160,6 +160,7 @@ $cur_user = $_SESSION["username"];
                 <?php
                 endwhile;
                 ?>
+                <option value="other">Other</option>
             </select>
             </div>
 
