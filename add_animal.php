@@ -131,17 +131,36 @@ $cur_user = $_SESSION["username"];
             <select id="Dam" name="Dam" class="form-control">
             <?php 
             //$sql = "SELECT `day_of_week` FROM `stats` WHERE `timeframe` = \"week\"";
-            $sql = "SELECT `name` FROM `animals` WHERE `gender` = \"Male\" && `user_id`='$cur_user'";
-            $result = mysqli_query($con,$sql);
+            $sql_dam = "SELECT `name` FROM `animals` WHERE `gender` = \"Female\" && `user_id`='$cur_user'";
+            $result_dam = mysqli_query($con,$sql_dam);
             $count=1;
-            while($row = mysqli_fetch_assoc($result)):;
+            while($row_dam = mysqli_fetch_assoc($result_dam)):;
             ?>
-                <option value="<?php echo $row["name"]; ?>"><?php echo $row["name"]; ?></option>
+                <option value="<?php echo $row_dam["name"]; ?>"><?php echo $row_dam["name"]; ?></option>
 
                 <?php
                 endwhile;
                 ?>
 </select>
+            </div>
+
+            
+            <div class="form-group">
+            <label>Sire</label>
+            <select id="sire" name="sire" class="form-control">
+            <?php 
+            //$sql = "SELECT `day_of_week` FROM `stats` WHERE `timeframe` = \"week\"";
+            $sql_sire = "SELECT `name` FROM `animals` WHERE `gender` = \"Male\" && `user_id`='$cur_user'";
+            $result_sire = mysqli_query($con,$sql_sire);
+            $count=1;
+            while($row_dam = mysqli_fetch_assoc($result_sire)):;
+            ?>
+                <option value="<?php echo $row_sire["name"]; ?>"><?php echo $row_sire["name"]; ?></option>
+
+                <?php
+                endwhile;
+                ?>
+            </select>
             </div>
 
             <div class="form-group">
