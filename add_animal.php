@@ -145,6 +145,7 @@ $cur_user = $_SESSION["username"];
                 endwhile;
                 ?>
                 <option value="other">Other</option>
+                <option value="NULL" selected></option>
             </select>
             </div>
 
@@ -165,6 +166,7 @@ $cur_user = $_SESSION["username"];
                 endwhile;
                 ?>
                 <option value="other">Other</option>
+                <option value="NULL" selected></option>
             </select>
             </div>
 
