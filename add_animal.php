@@ -141,7 +141,7 @@ $cur_user = $_SESSION["username"];
                 <?php
                 endwhile;
                 ?>
-</select>
+            </select>
             </div>
 
             
@@ -153,7 +153,7 @@ $cur_user = $_SESSION["username"];
             $sql_sire = "SELECT `name` FROM `animals` WHERE `gender` = \"Male\" && `user_id`='$cur_user'";
             $result_sire = mysqli_query($con,$sql_sire);
             $count_sire=1;
-            while($row_dam = mysqli_fetch_assoc($result_sire)):;
+            while($row_sire = mysqli_fetch_assoc($result_sire)):;
             ?>
                 <option value="<?php echo $row_sire["name"]; ?>"><?php echo $row_sire["name"]; ?></option>
 
