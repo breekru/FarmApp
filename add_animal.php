@@ -27,6 +27,9 @@ $cur_user = $_SESSION["username"];
         body{ font: 14px sans-serif; }
         .wrapper{ width: 350px; padding: 20px;}
     </style>
+
+
+
 </head>
 <body>
 <nav class="navbar navbar-default">
@@ -141,6 +144,7 @@ $cur_user = $_SESSION["username"];
                 <?php
                 endwhile;
                 ?>
+                <option value="other">Other</option>
             </select>
             </div>
 
@@ -162,6 +166,7 @@ $cur_user = $_SESSION["username"];
                 ?>
                 <option value="other">Other</option>
             </select>
+            <input type="text" id="txtOther" disabled="disabled" />
             </div>
 
             <div class="form-group">
@@ -237,6 +242,18 @@ $cur_user = $_SESSION["username"];
         if ( !empty($_SERVER['CONTENT_LENGTH']) && empty($_FILES) && empty($_POST) )
     echo 'The uploaded zip was too large. You must upload a file smaller than ' . ini_get("upload_max_filesize");
         ?>
+
+
+<script type="text/javascript">
+    function EnableDisableTextBox(sire) {
+        var selectedValue = ddlModels.options[ddlModels.selectedIndex].value;
+        var txtOther = document.getElementById("txtOther");
+        txtOther.disabled = selectedValue == 5 ? false : true;
+        if (!txtOther.disabled) {
+            txtOther.focus();
+        }
+    }
+</script>
     </body>
 </html>
 
