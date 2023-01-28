@@ -40,7 +40,7 @@ $date_purchased = mysqli_real_escape_string($link, $_REQUEST['purchased']);
 $date_sold = mysqli_real_escape_string($link, $_REQUEST['sold']);
 $notes = mysqli_real_escape_string($link, $_REQUEST['notes']);
 $meds = mysqli_real_escape_string($link, $_REQUEST['meds']);
-$for_sale = mysqli_real_escape_string($ling, $_REQUEST['for_sale']);
+$for_sale = mysqli_real_escape_string($link, $_REQUEST['for_sale']);
 $image = mysqli_real_escape_string($link, $_REQUEST['image']);
 $user_id = $_SESSION["username"];
 
