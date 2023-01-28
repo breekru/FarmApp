@@ -40,6 +40,7 @@ $date_purchased = mysqli_real_escape_string($link, $_REQUEST['purchased']);
 $date_sold = mysqli_real_escape_string($link, $_REQUEST['sold']);
 $notes = mysqli_real_escape_string($link, $_REQUEST['notes']);
 $meds = mysqli_real_escape_string($link, $_REQUEST['meds']);
+$for_sale = mysqli_real_escape_string($ling, $_REQUEST['for_sale']);
 $image = mysqli_real_escape_string($link, $_REQUEST['image']);
 $user_id = $_SESSION["username"];
 
@@ -61,10 +62,10 @@ if (isset($_POST['upload'])) {
 //    $dod1 = $_REQUEST['dod'];
 //}
 if($date_sold == ''){
-$sql = "INSERT INTO animals (id, type, breed, number, name, gender, offspring, parents, status, dob, dod, purch_cost, purch_info, sell_price, sell_info, color, reg_num, reg_name, date_purchased, notes, meds, image, created_at, user_id) VALUES (NULL, '$type', '$breed', '$number', '$name', '$gender', '$offspring', '$parents', '$status', '$dob', '$dod', '$purch_cost', '$purch_info', '$sell_price', '$sell_info', '$color', '$reg_num', '$reg_name', '$date_purchased', '$notes', '$meds', '$image', CURRENT_TIMESTAMP, '$user_id')";
+$sql = "INSERT INTO animals (id, type, breed, number, name, gender, offspring, parents, status, dob, dod, purch_cost, purch_info, sell_price, sell_info, color, reg_num, reg_name, date_purchased, notes, meds, image, created_at, user_id) VALUES (NULL, '$type', '$breed', '$number', '$name', '$gender', '$offspring', '$parents', '$status', '$dob', '$dod', '$purch_cost', '$purch_info', '$sell_price', '$sell_info', '$color', '$reg_num', '$reg_name', '$date_purchased', '$notes', '$meds', '$for_sale', '$image', CURRENT_TIMESTAMP, '$user_id')";
 } else {
 
-$sql = "INSERT INTO animals (id, type, breed, number, name, gender, offspring, parents, status, dob, dod, purch_cost, purch_info, sell_price, sell_info, color, reg_num, reg_name, date_purchased, date_sold, notes, meds, image, created_at, user_id) VALUES (NULL, '$type', '$breed', '$number', '$name', '$gender', '$offspring', '$parents', '$status', '$dob', '$dod', '$purch_cost', '$purch_info', '$sell_price', '$sell_info', '$color', '$reg_num', '$reg_name', '$date_purchased', '$date_sold', '$notes', '$meds', '$image', CURRENT_TIMESTAMP, '$user_id')";
+$sql = "INSERT INTO animals (id, type, breed, number, name, gender, offspring, parents, status, dob, dod, purch_cost, purch_info, sell_price, sell_info, color, reg_num, reg_name, date_purchased, date_sold, notes, meds, image, created_at, user_id) VALUES (NULL, '$type', '$breed', '$number', '$name', '$gender', '$offspring', '$parents', '$status', '$dob', '$dod', '$purch_cost', '$purch_info', '$sell_price', '$sell_info', '$color', '$reg_num', '$reg_name', '$date_purchased', '$date_sold', '$notes', '$meds', '$for_sale',  '$image', CURRENT_TIMESTAMP, '$user_id')";
 }
 if(mysqli_query($link, $sql)){
     header("refresh:5;url=welcome.php");
