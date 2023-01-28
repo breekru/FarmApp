@@ -193,9 +193,9 @@ required value="<?php echo $row['age'];?>" /></p>
                 <label for="status">List for sale?</label>
                 <select id="for_sale" name="for_sale" class="form-control" required value="<?php echo $row['for_sale'];?>" />
                     <option selected="selected" value="<?php echo $row['for_sale'];?>"><?php echo $row['for_sale'];?></option>
-                    <option value="for-sale">Yes</option>
-                    <option value="not-for-sale">No</option>
-                    <option value="has-sold">Has Been Sold</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    <option value="Has Been Sold">Has Been Sold</option>
                 </select>
             </div>
 
