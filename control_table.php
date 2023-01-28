@@ -62,10 +62,10 @@ if (isset($_POST['upload'])) {
 //    $dod1 = $_REQUEST['dod'];
 //}
 if($date_sold == ''){
-$sql = "INSERT INTO animals (id, type, breed, number, name, gender, offspring, parents, status, dob, dod, purch_cost, purch_info, sell_price, sell_info, color, reg_num, reg_name, date_purchased, notes, meds, image, created_at, user_id) VALUES (NULL, '$type', '$breed', '$number', '$name', '$gender', '$offspring', '$parents', '$status', '$dob', '$dod', '$purch_cost', '$purch_info', '$sell_price', '$sell_info', '$color', '$reg_num', '$reg_name', '$date_purchased', '$notes', '$meds', '$for_sale', '$image', CURRENT_TIMESTAMP, '$user_id')";
+$sql = "INSERT INTO animals (id, type, breed, number, name, gender, offspring, parents, status, dob, dod, purch_cost, purch_info, sell_price, sell_info, color, reg_num, reg_name, date_purchased, notes, meds, for_sale, image, created_at, user_id) VALUES (NULL, '$type', '$breed', '$number', '$name', '$gender', '$offspring', '$parents', '$status', '$dob', '$dod', '$purch_cost', '$purch_info', '$sell_price', '$sell_info', '$color', '$reg_num', '$reg_name', '$date_purchased', '$notes', '$meds', '$for_sale', '$image', CURRENT_TIMESTAMP, '$user_id')";
 } else {
 
-$sql = "INSERT INTO animals (id, type, breed, number, name, gender, offspring, parents, status, dob, dod, purch_cost, purch_info, sell_price, sell_info, color, reg_num, reg_name, date_purchased, date_sold, notes, meds, image, created_at, user_id) VALUES (NULL, '$type', '$breed', '$number', '$name', '$gender', '$offspring', '$parents', '$status', '$dob', '$dod', '$purch_cost', '$purch_info', '$sell_price', '$sell_info', '$color', '$reg_num', '$reg_name', '$date_purchased', '$date_sold', '$notes', '$meds', '$for_sale',  '$image', CURRENT_TIMESTAMP, '$user_id')";
+$sql = "INSERT INTO animals (id, type, breed, number, name, gender, offspring, parents, status, dob, dod, purch_cost, purch_info, sell_price, sell_info, color, reg_num, reg_name, date_purchased, date_sold, notes, meds, for_sale, image, created_at, user_id) VALUES (NULL, '$type', '$breed', '$number', '$name', '$gender', '$offspring', '$parents', '$status', '$dob', '$dod', '$purch_cost', '$purch_info', '$sell_price', '$sell_info', '$color', '$reg_num', '$reg_name', '$date_purchased', '$date_sold', '$notes', '$meds', '$for_sale',  '$image', CURRENT_TIMESTAMP, '$user_id')";
 }
 if(mysqli_query($link, $sql)){
     header("refresh:5;url=welcome.php");
