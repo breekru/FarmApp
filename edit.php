@@ -71,8 +71,8 @@ $row = mysqli_fetch_assoc($result);
         <a href="reset-password.php" class="btn btn-warning">Reset Password</a>
         <a href="logout.php" class="btn btn-danger">Log Out</a>
     </div>-->
-<div class="form">
-
+<!--<div class="form">-->
+<div class="wrapper container">
 <h1>Update Record</h1>
 <?php
 $verify = "";
