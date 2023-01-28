@@ -131,7 +131,7 @@ required value="<?php echo $row['age'];?>" /></p>
             	<input type="hidden" name="new" value="1" />
 				<input name="id" type="hidden" value="<?php echo $row['id'];?>" />
                 <label for="type">Type</label>
-                <select name="type" required value="<?php echo $row['type'];?>" />
+                <select name="type" class="form-control" required value="<?php echo $row['type'];?>" />
                     <option selected="selected" value="<?php echo $row['type'];?>"><?php echo $row['type'];?></option>
                     <option value="Sheep">Sheep</option>
                     <option value="Chicken">Chicken</option>
@@ -141,19 +141,19 @@ required value="<?php echo $row['age'];?>" /></p>
             </div>    
             <div class="form-group">
                 <label>Breed</label>
-                <input type="text" name="breed" required value="<?php echo $row['breed'];?>" />
+                <input type="text" name="breed" class="form-control" required value="<?php echo $row['breed'];?>" />
             </div>
             <div class="form-group">
                 <label>Number</label>
-                <input type="text" name="number" required value="<?php echo $row['number'];?>" />
+                <input type="text" name="number" class="form-control" required value="<?php echo $row['number'];?>" />
             </div>
             <div class="form-group">
                 <label>Name</label>
-                <input type="text" name="name" required value="<?php echo $row['name'];?>" />
+                <input type="text" name="name" class="form-control" required value="<?php echo $row['name'];?>" />
             </div>
             <div class="form-group">
                 <label>Gender</label>
-                <select name="gender" id="gender" required value="<?php echo $row['gender'];?>" />
+                <select name="gender" id="gender" class="form-control" required value="<?php echo $row['gender'];?>" />
                     <option selected="selected" value="<?php echo $row['gender'];?>"><?php echo $row['gender'];?></option>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
@@ -161,16 +161,16 @@ required value="<?php echo $row['age'];?>" /></p>
             </div>
             <div class="form-group">
                 <label>Offspring</label>
-                <input type="text" name="offspring" required value="<?php echo $row['offspring'];?>" />
+                <input type="text" name="offspring" class="form-control" required value="<?php echo $row['offspring'];?>" />
             </div>
             <div class="form-group">
                 <label>Parents</label>
-                <input type="text" name="parents" required value="<?php echo $row['parents'];?>" />
+                <input type="text" name="parents" class="form-control" required value="<?php echo $row['parents'];?>" />
             </div>
 
             <div class="form-group">
                 <label for="status">Status</label>
-                <select id="status" name="status" required value="<?php echo $row['status'];?>" />
+                <select id="status" name="status" class="form-control" required value="<?php echo $row['status'];?>" />
                     <option selected="selected" value="<?php echo $row['status'];?>"><?php echo $row['status'];?></option>
                     <option value="Alive">Alive</option>
                     <option value="Dead">Dead</option>
@@ -182,11 +182,11 @@ required value="<?php echo $row['age'];?>" /></p>
 
             <div class="form-group">
                 <label>Purchased</label>
-                <input type="date" name="date_purchased" required value="<?php echo $row['date_purchased'];?>" />
+                <input type="date" name="date_purchased" class="form-control" required value="<?php echo $row['date_purchased'];?>" />
             </div>
             <div class="form-group">
                 <label>Sold</label>
-                <input type="date" name="date_sold" value="<?php echo $row['date_sold'];?>" />
+                <input type="date" name="date_sold" class="form-control" value="<?php echo $row['date_sold'];?>" />
             </div>
 
             <div class="form-group">
