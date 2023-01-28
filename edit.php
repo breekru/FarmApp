@@ -187,6 +187,16 @@ required value="<?php echo $row['age'];?>" /></p>
                 <label>Sold</label>
                 <input type="date" name="date_sold" value="<?php echo $row['date_sold'];?>" />
             </div>
+
+            <div class="form-group">
+                <label for="status">List for sale?</label>
+                <select id="for_sale" name="for_sale" class="form-control">
+                    <option value="for-sale">Yes</option>
+                    <option value="not-for-sale">No</option>
+                    <option value="has-sold">Has Been Sold</option>
+                </select>
+            </div>
+
             <div class="form-group">
               <label>Notes</label>
               <textarea type="text" class="form-control" rows="5" id="notes" name="notes"><?php echo $row['notes'];?></textarea>

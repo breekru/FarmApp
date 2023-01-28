@@ -231,6 +231,14 @@ $cur_user = $_SESSION["username"];
             </div>
 
             <div class="form-group">
+                <label for="status">List for sale?</label>
+                <select id="for_sale" name="for_sale" class="form-control">
+                    <option value="for-sale">Yes</option>
+                    <option value="not-for-sale">No</option>
+                </select>
+            </div>
+
+            <div class="form-group">
                 <input type="file" name="image">
             </div>
             <div class="form-group">
