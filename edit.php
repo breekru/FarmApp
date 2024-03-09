@@ -161,7 +161,7 @@ required value="<?php echo $row['age'];?>" /></p>
             </div>
             <div class="form-group">
                 <label>Offspring</label>
-                <input type="text" name="offspring" class="form-control" required value="<?php echo $row['offspring'];?>" />
+                <textarea type="text" class="form-control" rows="5" id="offspring" name="offspring"><?php echo $row['offspring'];?></textarea>
             </div>
             <div class="form-group">
                 <label>Parents</label>

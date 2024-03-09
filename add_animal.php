@@ -122,7 +122,7 @@ $cur_user = $_SESSION["username"];
             </div>
             <div class="form-group">
                 <label>Offspring</label>
-                <input type="text" name="offspring" class="form-control">
+                <textarea class="form-control" rows="5" id="offspring" name="offspring"></textarea>
             </div>
             <div class="form-group">
                 <label>Parents</label>
