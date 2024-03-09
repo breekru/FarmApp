@@ -93,7 +93,7 @@ mysqli_close($link);
     <style type="text/css">
         body{ font: 14px sans-serif; text-align: center; }
     </style>
-    <link rel="icon" type="image/ico" href="/img/favicon.ico" />
+    <link rel="icon" type="image/ico" href="img/favicon.ico" />
 </head>
 <body>
     <div class="container">

@@ -109,7 +109,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         body{ font: 14px sans-serif; }
         .wrapper{ width: 350px; padding: 20px; }
     </style>
-    <link rel="icon" type="image/ico" href="/farmapp/img/favicon.ico" />
+    <link rel="icon" type="image/ico" href="img/favicon.ico" />
 </head>
 <body>
     <div class="wrapper">

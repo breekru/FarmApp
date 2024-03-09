@@ -25,7 +25,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="headerstyle.css" />
-    <link rel="icon" type="image/ico" href="/farmapp/img/favicon.ico" />
+    <link rel="icon" type="image/ico" href="img/favicon.ico" />
     <style type="text/css">
         body{ font: 14px sans-serif; }
         .wrapper{ width: 350px; padding: 20px; }
@@ -71,7 +71,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <a href="logout.php" class="btn btn-danger">Log Out</a>
     </div>-->
     <div class="page-header">
-        <img src="/farmapp/img/logo_base.png">
+        <img src="img/logo_base.png">
         <h1>Hi, <?php echo htmlspecialchars($_SESSION["username"]); ?>! What type of animal do you want info for?</h1>
     </div>
     <p>

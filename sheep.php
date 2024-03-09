@@ -22,7 +22,7 @@ $cur_user = $_SESSION["username"];
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="headerstyle.css" />
-    <link rel="icon" type="image/ico" href="/farmapp/img/favicon.ico" />
+    <link rel="icon" type="image/ico" href="img/favicon.ico" />
     <style type="text/css">
         body{ font: 14px sans-serif; }
         .wrapper{ width: 350px; padding: 20px; }
