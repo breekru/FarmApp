@@ -12,7 +12,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 }
 
 $id=$_REQUEST['id'];
-$query = "SELECT `id`, `type`, `breed`, `number`, `name`, `gender`, `offspring`, `parents`, `date_purchased`, `date_sold`, `notes`, `meds`, `image` FROM `animals` where id='".$id."'"; 
+$query = "SELECT `id`, `type`, `breed`, `number`, `name`, `gender`, `offspring`, `parents`, `status`, `date_purchased`, `date_sold`, `notes`, `meds`, `image` FROM `animals` where id='".$id."'"; 
 $result = mysqli_query($con, $query) or die ( mysqli_error());
 $row = mysqli_fetch_assoc($result);
 $imgresult = mysqli_query($con, "SELECT * FROM animals WHERE id='".$id."'");
