@@ -87,13 +87,14 @@ $name =$_REQUEST['name'];
 $gender =$_REQUEST['gender'];
 $offspring =$_REQUEST['offspring'];
 $parents =$_REQUEST['parents'];
+$status1 =$_REQUEST['status'];
 $date_purchased =$_REQUEST['date_purchased'];
 $date_sold =$_REQUEST['date_sold'];
 $notes =$_REQUEST['notes'];
 $meds =$_REQUEST['meds'];
 $user_id = $_SESSION["username"];
 $update="update animals set created_at='".$created_at."',
-type='".$type."', breed='".$breed."', number='".$number."', name='".$name."', gender='".$gender."', offspring='".$offspring."', parents='".$parents."', date_purchased='".$date_purchased."', date_sold='".$date_sold."', notes='".$notes."', meds='".$meds."',
+type='".$type."', breed='".$breed."', number='".$number."', name='".$name."', gender='".$gender."', offspring='".$offspring."', parents='".$parents."', status1='".$status."', date_purchased='".$date_purchased."', date_sold='".$date_sold."', notes='".$notes."', meds='".$meds."',
 user_id='".$user_id."' where id='".$id."'";
 mysqli_query($con, $update) or die(mysqli_error());
 $status = "Record Updated Successfully. </br></br>
@@ -160,6 +161,10 @@ while($row = mysqli_fetch_assoc($result)) {
 <tr>
 <td align="center">Parents:</td>
 <td align="center"><?php echo $row["parents"]; ?></td>
+</tr>
+<tr>
+<td align="center">Status:</td>
+<td align="center"><?php echo $row["status1"]; ?></td>
 </tr>
 <tr>
 <td align="center">Purchased:</td>
