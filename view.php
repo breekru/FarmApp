@@ -164,7 +164,7 @@ while($row = mysqli_fetch_assoc($result)) {
 </tr>
 <tr>
 <td align="center">Status:</td>
-<td align="center"><?php echo $row["status1"]; ?></td>
+<td align="center"><?php echo $row["status"]; ?></td>
 </tr>
 <tr>
 <td align="center">Purchased:</td>
