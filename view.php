@@ -251,20 +251,7 @@ while($row = mysqli_fetch_assoc($result)) {
 </div>
     </td>
     </tr>
-    <tr>
-        <td colspan="2" align="center">
-            <div align="center">
-                <a href=<?php echo $return; ?>.php class="btn btn-block btn-warning">Return to List</a>
-            </div>
-        </td>
-    </tr>
-    <tr>
-        <td colspan="2" align="center">
-            <div align="center">
-                <a href="choose.php" class="btn btn-block btn-primary">Back to Choose Animal</a>
-            </div>
-        </td>
-    </tr>
+
 
 <?php $count++; } ?>
 </tbody>
