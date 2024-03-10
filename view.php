@@ -126,6 +126,20 @@ echo '<p style="color:#FF0000;">'.$status.'</p>';
 
 <!--<table width="80%" border="1" style="border-collapse:collapse;">-->
 <table width="50%" border="1" class="table table-hover">
+<tr>
+        <td colspan="2" align="center">
+            <div align="center">
+                <a href=<?php echo $return; ?>.php class="btn btn-block btn-warning">Return to List</a>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <div align="center">
+                <a href="choose.php" class="btn btn-block btn-primary">Back to Choose Animal</a>
+            </div>
+        </td>
+    </tr>
 <?php
 $count=1;
 $result = mysqli_query($con,$query);
