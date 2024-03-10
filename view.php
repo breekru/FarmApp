@@ -159,7 +159,8 @@ while($row = mysqli_fetch_assoc($result)) {
 <tr>
 <td align="center">Date of Birth:</td>
 <?php
-$f_dob = date("m/d/Y", $dob);
+$dob_date = strtotime($row["dob"]);
+$f_dob = date("m/d/Y", $dob_date);
 ?>
 <td align="center"><?php echo $f_dob; ?></td>
 </tr>
