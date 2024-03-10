@@ -157,12 +157,12 @@ while($row = mysqli_fetch_assoc($result)) {
 <td align="center"><?php echo $row["gender"]; ?></td>
 </tr>
 <tr>
-<td align="center">Date of Birth:</td>
-<?php
-$dob_date = strtotime($row["dob"]);
-$f_dob = date("m/d/Y", $dob_date);
-?>
-<td align="center"><?php echo $f_dob; ?></td>
+    <td align="center">Date of Birth:</td>
+    <?php
+    $dob_date = strtotime($row["dob"]);
+    $f_dob = date("m/d/Y", $dob_date);
+    ?>
+    <td align="center"><?php echo $f_dob; ?></td>
 </tr>
 <tr>
 <td align="center">Date of Death/Dispatch:</td>
