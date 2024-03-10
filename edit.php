@@ -25,6 +25,7 @@ $row = mysqli_fetch_assoc($result);
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="currency.js"></script>
     <link rel="stylesheet" href="headerstyle.css" />
     <link rel="icon" type="image/ico" href="img/favicon.ico" />
     <style type="text/css">
@@ -202,7 +203,7 @@ required value="<?php echo $row['age'];?>" /></p>
             </div>
             <div class="form-group">
                 <label>Sold Price</label>
-                <input type="text" name="sell_price" class="form-control" required value="<?php echo $row['sell_price'];?>" />
+                <input type="text" name="sell_price" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" data-type="currency" class="form-control" required value="<?php echo $row['sell_price'];?>" />
             </div>
             <div class="form-group">
                 <label>Purchaser Info</label>
