@@ -171,7 +171,7 @@ while($row = mysqli_fetch_assoc($result)) {
         $dod_date = strtotime($row["dod"]);
         $f_dod = date("m/d/Y", $dod_date);
     } else {
-        $f_dod = ""; // Set to blank if $row["dob"] is null
+        $f_dod = "N/A"; // Set to blank if $row["dob"] is null
     }
     ?>
     <td align="center"><?php echo $f_dod; ?></td>
