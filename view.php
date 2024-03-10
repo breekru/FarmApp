@@ -126,6 +126,18 @@ echo '<p style="color:#FF0000;">'.$status.'</p>';
 
 <!--<table width="80%" border="1" style="border-collapse:collapse;">-->
 <table width="50%" border="1" class="table table-hover">
+<?php $return = strtolower($row["type"]); ?>
+        <?php
+        if ($return == "pig") {
+            $return = "pigs";
+        }
+        if ($return == "chicken"){
+            $return = "chickens";
+        }
+        if ($return == "turkey"){
+            $return = "turkeys";
+        }
+        ?>
 <tr>
         <td colspan="2" align="center">
             <div align="center">
