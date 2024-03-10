@@ -203,7 +203,7 @@ required value="<?php echo $row['age'];?>" /></p>
             </div>
             <div class="form-group">
                 <label>Sold Price</label>
-                $<input type="text" name="sell_price" class="form-control" value="<?php echo $row['sell_price'];?>" />
+                <input type="text" name="sell_price" class="form-control" value="$<?php echo $row['sell_price'];?>" />
             </div>
             <div class="form-group">
                 <label>Purchaser Info</label>
