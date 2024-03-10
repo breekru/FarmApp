@@ -165,10 +165,10 @@ while($row = mysqli_fetch_assoc($result)) {
     <td align="center"><?php echo $f_dob; ?></td>
 </tr>
 <tr>
-    <td align="center">Date of Birth:</td>
+    <td align="center">Date of Death/Dispatch:</td>
     <?php
     if (!empty($row["dod"])) {
-        $dob_date = strtotime($row["dod"]);
+        $dod_date = strtotime($row["dod"]);
         $f_dod = date("m/d/Y", $dod_date);
     } else {
         $f_dod = ""; // Set to blank if $row["dob"] is empty
