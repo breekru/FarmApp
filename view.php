@@ -165,8 +165,12 @@ while($row = mysqli_fetch_assoc($result)) {
     <td align="center"><?php echo $f_dob; ?></td>
 </tr>
 <tr>
-<td align="center">Date of Death/Dispatch:</td>
-<td align="center"><?php echo $row["dod"]; ?></td>
+    <td align="center">Date of Death/Dispatch:</td>
+    <?php
+    $dod_date = strtotime($row["dod"]);
+    $f_dod = date("m/d/Y", $dod_date);
+    ?>
+    <td align="center"><?php echo $f_dod; ?></td>
 </tr>
 <tr>
 <td align="center">Offspring:</td>
