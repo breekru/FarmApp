@@ -192,7 +192,7 @@ required value="<?php echo $row['age'];?>" /></p>
 
             <div class="form-group">
                 <label>Purchased</label>
-                <input type="date" name="date_purchased" class="form-control" required value="<?php echo $row['date_purchased'];?>" />
+                <input type="date" name="date_purchased" class="form-control" value="<?php echo $row['date_purchased'];?>" />
             </div>
             <div class="form-group">
                 <label>Sold</label>
