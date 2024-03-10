@@ -167,11 +167,11 @@ while($row = mysqli_fetch_assoc($result)) {
 <tr>
     <td align="center">Date of Death/Dispatch:</td>
     <?php
-    if (!empty($row["dod"])) {
+    if ($row["dod"] !== null) {
         $dod_date = strtotime($row["dod"]);
         $f_dod = date("m/d/Y", $dod_date);
     } else {
-        $f_dod = "N/A"; // Set to blank if $row["dob"] is empty
+        $f_dod = ""; // Set to blank if $row["dob"] is null
     }
     ?>
     <td align="center"><?php echo $f_dod; ?></td>
