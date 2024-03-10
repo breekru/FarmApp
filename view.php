@@ -158,7 +158,11 @@ while($row = mysqli_fetch_assoc($result)) {
 </tr>
 <tr>
 <td align="center">Date of Birth:</td>
-<td align="center"><?php echo $row["dob"]; ?></td>
+<?php
+$f_dob = date("m/d/Y", $dob);
+?>
+<?php $formatted_date = date("m/d/Y", $date); ?>
+<td align="center"><?php echo $row["f_dob"]; ?></td>
 </tr>
 <tr>
 <td align="center">Date of Death/Dispatch:</td>
