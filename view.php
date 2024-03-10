@@ -12,7 +12,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 }
 
 $id=$_REQUEST['id'];
-$query = "SELECT `id`, `type`, `breed`, `number`, `name`, `gender`, `offspring`, `parents`, `status`, `date_purchased`, `date_sold`, `notes`, `meds`, `image` FROM `animals` where id='".$id."'"; 
+$query = "SELECT `id`, `type`, `breed`, `number`, `name`, `gender`, `dob`, `dod`, `offspring`, `parents`, `status`, `date_purchased`, `date_sold`, `notes`, `meds`, `image` FROM `animals` where id='".$id."'"; 
 $result = mysqli_query($con, $query) or die ( mysqli_error());
 $row = mysqli_fetch_assoc($result);
 $imgresult = mysqli_query($con, "SELECT * FROM animals WHERE id='".$id."'");
@@ -91,10 +91,12 @@ $status1 =$_REQUEST['status'];
 $date_purchased =$_REQUEST['date_purchased'];
 $date_sold =$_REQUEST['date_sold'];
 $notes =$_REQUEST['notes'];
+$dob =$_REQUEST['dob'];
+$dod =$_REQUEST['dod'];
 $meds =$_REQUEST['meds'];
 $user_id = $_SESSION["username"];
 $update="update animals set created_at='".$created_at."',
-type='".$type."', breed='".$breed."', number='".$number."', name='".$name."', gender='".$gender."', offspring='".$offspring."', parents='".$parents."', status1='".$status."', date_purchased='".$date_purchased."', date_sold='".$date_sold."', notes='".$notes."', meds='".$meds."',
+type='".$type."', breed='".$breed."', number='".$number."', name='".$name."', gender='".$gender."', dob='".$dob."', dod='".$dod."', offspring='".$offspring."', parents='".$parents."', status1='".$status."', date_purchased='".$date_purchased."', date_sold='".$date_sold."', notes='".$notes."', meds='".$meds."',
 user_id='".$user_id."' where id='".$id."'";
 mysqli_query($con, $update) or die(mysqli_error());
 $status = "Record Updated Successfully. </br></br>
@@ -153,6 +155,14 @@ while($row = mysqli_fetch_assoc($result)) {
 <tr>
 <td align="center">Gender:</td>
 <td align="center"><?php echo $row["gender"]; ?></td>
+</tr>
+<tr>
+<td align="center">Date of Birth:</td>
+<td align="center"><?php echo $row["dob"]; ?></td>
+</tr>
+<tr>
+<td align="center">Date of Death/Dispatch:</td>
+<td align="center"><?php echo $row["dod"]; ?></td>
 </tr>
 <tr>
 <td align="center">Offspring:</td>
