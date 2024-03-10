@@ -12,7 +12,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 }
 
 $id=$_REQUEST['id'];
-$query = "SELECT `id`, `type`, `breed`, `number`, `name`, `gender`, `offspring`, `parents`, `status`, `date_purchased`, `date_sold`, `notes`, `meds`, `for_sale` FROM `animals` where id='".$id."'"; 
+$query = "SELECT `id`, `type`, `breed`, `number`, `name`, `gender`, `dob`, `dod`, `offspring`, `parents`, `status`, `date_purchased`, `date_sold`, `notes`, `meds`, `for_sale` FROM `animals` where id='".$id."'"; 
 $result = mysqli_query($con, $query) or die ( mysqli_error());
 $row = mysqli_fetch_assoc($result);
 ?>
@@ -85,6 +85,8 @@ $breed =$_REQUEST['breed'];
 $number =$_REQUEST['number'];
 $name =$_REQUEST['name'];
 $gender =$_REQUEST['gender'];
+$dob =$_REQUEST['dob'];
+$dod =$_REQUEST['dod'];
 $offspring =$_REQUEST['offspring'];
 $parents =$_REQUEST['parents'];
 $status =$_REQUEST['status'];
@@ -99,10 +101,10 @@ $user_id = $_SESSION["username"];
 //user_id='".$user_id."' where id='".$id."'";
 
 if($date_sold == ''){
-$update = "UPDATE animals SET created_at='".$created_at."', type='".$type."', breed='".$breed."', number='".$number."', name='".$name."', gender='".$gender."', offspring='".$offspring."', parents='".$parents."', status='".$status."', date_purchased='".$date_purchased."', date_sold=NULL, notes='".$notes."', meds='".$meds."', for_sale='".$for_sale."', user_id='".$user_id."' where id='".$id."'";
+$update = "UPDATE animals SET created_at='".$created_at."', type='".$type."', breed='".$breed."', number='".$number."', name='".$name."', gender='".$gender."', dob='".$dob."', dod='".$dod."', offspring='".$offspring."', parents='".$parents."', status='".$status."', date_purchased='".$date_purchased."', date_sold=NULL, notes='".$notes."', meds='".$meds."', for_sale='".$for_sale."', user_id='".$user_id."' where id='".$id."'";
 } else {
 
-$update = "UPDATE animals SET created_at='".$created_at."', type='".$type."', breed='".$breed."', number='".$number."', name='".$name."', gender='".$gender."', offspring='".$offspring."', parents='".$parents."', status='".$status."', date_purchased='".$date_purchased."', date_sold='".$date_sold."', notes='".$notes."', meds='".$meds."', for_sale='".$for_sale."', user_id='".$user_id."' where id='".$id."'";
+$update = "UPDATE animals SET created_at='".$created_at."', type='".$type."', breed='".$breed."', number='".$number."', name='".$name."', gender='".$gender."', dob='".$dob."', dod='".$dod."', offspring='".$offspring."', parents='".$parents."', status='".$status."', date_purchased='".$date_purchased."', date_sold='".$date_sold."', notes='".$notes."', meds='".$meds."', for_sale='".$for_sale."', user_id='".$user_id."' where id='".$id."'";
 }
 
 mysqli_query($con, $update) or die(mysqli_error());
@@ -158,6 +160,14 @@ required value="<?php echo $row['age'];?>" /></p>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
                 </select>
+            </div>
+            <div class="form-group">
+                <label>Date of Birth</label>
+                <input type="date" name="dob" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Date of Death/Dispatch</label>
+                <input type="date" name="dod" class="form-control">
             </div>
             <div class="form-group">
                 <label>Offspring</label>
