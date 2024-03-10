@@ -226,7 +226,7 @@ while($row = mysqli_fetch_assoc($result)) {
 </tr>
 <tr>
 <td align="center">Sell Price:</td>
-<td align="center"><?php echo $row["sell_price"]; ?></td>
+<td align="center">$ <?php echo $row["sell_price"]; ?></td>
 </tr>
 <tr>
 <td align="center">Purchaser Info:</td>
