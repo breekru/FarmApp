@@ -161,7 +161,6 @@ while($row = mysqli_fetch_assoc($result)) {
 <?php
 $f_dob = date("m/d/Y", $dob);
 ?>
-<?php $formatted_date = date("m/d/Y", $date); ?>
 <td align="center"><?php echo $row["f_dob"]; ?></td>
 </tr>
 <tr>
