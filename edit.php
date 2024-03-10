@@ -25,7 +25,7 @@ $row = mysqli_fetch_assoc($result);
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="currency.js"></script>
+    <script src="/currency.js"></script>
     <link rel="stylesheet" href="headerstyle.css" />
     <link rel="icon" type="image/ico" href="img/favicon.ico" />
     <style type="text/css">
