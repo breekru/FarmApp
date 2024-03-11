@@ -239,7 +239,7 @@ $cur_user = $_SESSION["username"];
             </div>
 
             <div class="form-group">
-                <input type="file" name="image">
+                <input type="file" name="image" multiple accept="image/*">
             </div>
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Submit" name="upload">
